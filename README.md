@@ -10,8 +10,6 @@
 ### Requirement
 This project use `Node.js` with `TypsScript` to compile source code
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
 First, We need the API key from from RAWG. Access via link below and register for get the API key.
 https://rawg.io/apidocs
 
