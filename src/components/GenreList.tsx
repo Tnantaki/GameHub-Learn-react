@@ -1,21 +1,31 @@
-import { Button, Heading, HStack, Image, List, ListItem, Spinner } from '@chakra-ui/react'
-import useGenres, { Genre }  from '../hooks/useGenres'
-import urlCropImage from '../services/image-url';
+import {
+  Button,
+  Heading,
+  HStack,
+  Image,
+  List,
+  ListItem,
+  Spinner,
+} from "@chakra-ui/react";
+import useGenres, { Genre } from "../hooks/useGenres";
+import urlCropImage from "../services/image-url";
 
 interface Props {
-  onSelectGenre: (genre: Genre) => void
-  selectedGenre: Genre | null
+  onSelectGenre: (genre: Genre) => void;
+  selectedGenreId?: number;
 }
 
-const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
+const GenreList = ({ onSelectGenre, selectedGenreId }: Props) => {
   const { data, error, isLoading } = useGenres();
 
-  if (error) return null
-  if (isLoading) return <Spinner />
+  if (error) return null;
+  if (isLoading) return <Spinner />;
 
   return (
     <>
-      <Heading fontSize='2xl' marginBottom={3}>Genres</Heading>
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
       <List>
         {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY={1}>
@@ -24,15 +34,15 @@ const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
                 src={urlCropImage(genre.image_background)}
                 boxSize="40px"
                 borderRadius={8}
-                objectFit='cover' // not change the aspect ratio of image
+                objectFit="cover" // not change the aspect ratio of image
               />
               <Button
-                fontWeight={selectedGenre?.id === genre.id ? "bold" : "normal"}
+                fontWeight={selectedGenreId === genre.id ? "bold" : "normal"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize="lg"
                 variant="link"
-                whiteSpace='normal'
-                textAlign='left'
+                whiteSpace="normal"
+                textAlign="left"
               >
                 {genre.name}
               </Button>
@@ -42,6 +52,6 @@ const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
       </List>
     </>
   );
-}
+};
 
-export default GenreList
+export default GenreList;
