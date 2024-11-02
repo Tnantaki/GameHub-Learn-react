@@ -12,16 +12,16 @@
 ### Requirement
 This project use `Node.js` with `TypsScript` to compile source code
 
-First, We need the API key from from RAWG. Access via link below and register for get the API key.
+1. First, We need the API key from from RAWG. Access via link below and register for get the API key.
 https://rawg.io/apidocs
 
-Create `.env` file and put you key there.
+2. Create `.env` file and put you key there.
 ```env
 # .env
 VITE_RAWG_API_KEY=<place key here>
 ```
 
-Install dependency modules.
+3. Install dependency modules.
 ```shell
 npm i
 ```
@@ -31,3 +31,6 @@ Run server
 ```shell
 npm run dev
 ```
+
+## 📋Reference
+This project is build by learning from the course Ultimate React course by Mosh Hamedani. You can find the full course at: https://codewithmosh.com
