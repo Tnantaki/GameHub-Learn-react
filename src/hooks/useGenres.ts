@@ -1,4 +1,4 @@
-import useData, { ResponseData } from "./useData"
+import { ResponseData } from "./useData"
 import genres from "../data/genres"
 import { useQuery } from "@tanstack/react-query"
 import apiClient from "../services/api-client"
