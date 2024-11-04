@@ -4,6 +4,7 @@ import ShowMoreText from "../components/ShowMoreText";
 import useGameDetail from "../hooks/useGameDetail";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenShots from "../components/GameScreenShots";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -20,6 +21,7 @@ const GameDetailPage = () => {
       <ShowMoreText>{game.description_raw}</ShowMoreText>
       <GameAttributes game={game} />
       <GameTrailer gameId={game.id} />
+      <GameScreenShots gameId={game.id} />
     </>
   );
 };
