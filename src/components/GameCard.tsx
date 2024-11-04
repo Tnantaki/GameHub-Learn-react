@@ -1,16 +1,16 @@
-import { Card, CardBody, Heading, HStack, Image } from '@chakra-ui/react'
-import { Game } from '../hooks/useGames'
-import urlCropImage from '../services/image-url'
-import CriticScore from './CriticScore'
-import Emojis from './Emojis'
-import PlatformIconList from './PlatformIconList'
-import { Link } from 'react-router-dom'
+import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
+import { Game } from "../entities/Game";
+import urlCropImage from "../services/image-url";
+import CriticScore from "./CriticScore";
+import Emojis from "./Emojis";
+import PlatformIconList from "./PlatformIconList";
+import { Link } from "react-router-dom";
 
 interface Props {
-  game: Game
+  game: Game;
 }
 
-const GameCard = ({game}: Props) => {
+const GameCard = ({ game }: Props) => {
   return (
     <Link to={"/games/" + game.slug}>
       <Card>
@@ -30,6 +30,6 @@ const GameCard = ({game}: Props) => {
       </Card>
     </Link>
   );
-}
+};
 
-export default GameCard
+export default GameCard;
