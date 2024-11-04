@@ -3,7 +3,9 @@
 ## 📖 Description
 > This Project is create Game list website by using API from RAWG. The website will list the games with genres and platforms sorting feature.
 
-<img src="./images/preview.png" alt="Preview" style="border-radius: 10px; width: 800px; height: auto; border: 1px solid #333;">
+## Previews
+| ![.](images/home_page.png) <br> <center>**Home Page**</center> | ![.](images/game_detail_page.png) <br> <center>**Game Detail Page**</center> |
+| :-: | :-: |
 
 ## 🧰 Built with
 [![Tools](https://skillicons.dev/icons?i=nodejs,ts,react)](https://skillicons.dev)
