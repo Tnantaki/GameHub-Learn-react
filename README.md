@@ -18,21 +18,27 @@ This project use `Node.js` with `TypsScript` to compile source code
 https://rawg.io/apidocs
 
 2. Create `.env` file and put you key there.
-```env
-# .env
-VITE_RAWG_API_KEY=<place key here>
-```
+    ```env
+    # .env
+    VITE_RAWG_API_KEY=<place key here>
+    ```
 
 3. Install dependency modules.
-```shell
-npm i
-```
+    ```shell
+    npm i
+    ```
 
 ### Running Server
-Run server
-```shell
-npm run dev
-```
+
+1. Build the project
+    ```shell
+    npm run build
+    ```
+
+2. Run server from build files
+    ```shell
+    npm run preview
+    ```
 
 ## 📋Reference
 This project is build by learning from the course Ultimate React course by Mosh Hamedani. You can find the full course at: https://codewithmosh.com
